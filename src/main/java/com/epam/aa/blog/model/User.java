@@ -1,8 +1,8 @@
 package com.epam.aa.blog.model;
 
-/**
- * Created by almas on 23/02/2015.
- */
+import java.util.Date;
+
+
 public abstract class User {
     public static final String[] ROLES = {"Admin", "Author", "Subscriber", "Guest"};
     private Integer id;
@@ -10,8 +10,9 @@ public abstract class User {
     private String surname;
     private String email;
     private String role;
-    private boolean editPost = false;
-    private boolean editComment = false;
+    private Date joinDate;
+    private boolean editPost;
+    private boolean editComment;
     private Integer[] commentIds;
 
     public User(Integer id, String name, String surname, String email, Integer[] commentIds) {
@@ -20,6 +21,7 @@ public abstract class User {
         this.surname = surname;
         this.email = email;
         this.commentIds = commentIds;
+        this.joinDate = new Date();
     }
 
     public Integer getId() {
