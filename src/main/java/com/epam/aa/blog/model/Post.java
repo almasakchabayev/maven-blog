@@ -23,7 +23,6 @@ public class Post {
         this.authorId = authorId;
     }
 
-    //getters
     public Integer getId() {
         return id;
     }
@@ -48,8 +47,6 @@ public class Post {
         return authorId;
     }
 
-
-    //setters
     public void setTitle(String title) {
         this.title = title;
     }
