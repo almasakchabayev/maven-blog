@@ -9,6 +9,8 @@ public abstract class User {
     private String name;
     private String surname;
     private String email;
+    private String username;
+    private String password;
     private String role;
     private Date joinDate;
     private boolean editPost;
@@ -82,5 +84,29 @@ public abstract class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public Date getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(Date joinDate) {
+        this.joinDate = joinDate;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
