@@ -1,8 +1,11 @@
 package com.epam.aa.blog.model;
 
+import java.util.Date;
+
 public class Comment {
     private Integer id;
     private String text;
+    private Date date;
     private Integer userId;
     private Integer postId;
 
@@ -43,5 +46,13 @@ public class Comment {
 
     public void setPostId(Integer postId) {
         this.postId = postId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
