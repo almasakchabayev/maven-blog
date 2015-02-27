@@ -6,4 +6,5 @@ public class Post extends BaseEntity {
     private int views;
     private List<Comment> comments;
     private Blog blog;
+    private List<Tag> tags;
 }

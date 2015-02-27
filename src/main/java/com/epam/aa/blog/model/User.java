@@ -6,19 +6,14 @@ import java.util.List;
 
 
 public class User extends BaseEntity {
-    private String name;
-    private String surname;
+    private String firstName;
+    private String lastName;
     private String email;
-    private String username;
-    private String password;
-    private String role;
-    private Date joinDate;
-    private List<Comment> comments = new ArrayList<Comment>();
+    private String passwordHash;
+    private Date registrationDate;
+    private Role role;
+    private List<Post> posts;
+    private List<Comment> comments;
 
-    public enum Roles {
-        ADMIN, AUTHOR, SUBSCRIBER, GUEST;
 
-        private boolean editPost;
-        private boolean editComment;
-    }
 }

@@ -11,4 +11,5 @@ public class Blog extends BaseEntity {
     private String theme;
     private User user;
     private List<Post> posts;
+    private List<Tag> tags;
 }
