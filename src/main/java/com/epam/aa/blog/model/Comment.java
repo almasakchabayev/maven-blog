@@ -2,8 +2,8 @@ package com.epam.aa.blog.model;
 
 import java.util.Date;
 
-public class Comment {
-    private Integer id;
+public class Comment extends BaseEntity {
+
     private String text;
     private Date date;
     private Integer userId;
