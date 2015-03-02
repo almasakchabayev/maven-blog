@@ -12,5 +12,4 @@ public class Role {
     public Role(String title) {
         this.title = title;
     }
-
 }
