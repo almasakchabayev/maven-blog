@@ -1,15 +1,23 @@
 package com.epam.aa.blog.model;
 
-/**
- * Created by almas on 27/02/2015.
- */
-public class Role {
-    public static final Role ADMIN = new Role("admin");
-    public static final Role AUTHOR = new Role("author");
-    public static final Role GUEST = new Role("guest");
-    String title;
+import java.util.UUID;
 
-    public Role(String title) {
-        this.title = title;
+public class Role extends BaseEntity {
+    String name;
+
+    public Role(String name) {
+        this.name = name;
+    }
+
+    public Role(UUID uuid, String name) {
+        super(uuid);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

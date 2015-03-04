@@ -1,5 +1,6 @@
 package com.epam.aa.blog.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -76,5 +77,22 @@ public class User extends BaseEntity {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public void addPost(Post post) {
+        if (posts == null) posts = new ArrayList<Post>();
+        posts.add(post);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", passwordHash='" + passwordHash + '\'' +
+                ", registrationDate=" + registrationDate +
+                ", role=" + role +
+                '}';
     }
 }
